@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎬 Movie Recommendation System</h1>
+        <p>Get personalized movie suggestions based on your preferences</p>
+    </header>
+
+    <section class="container">
+
+        <div class="card">
+            <h2>Select Your Favorite Genre</h2>
+            <select id="genreSelect">
+                <option value="">-- Choose Genre --</option>
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Horror">Horror</option>
+            </select>
+        </div>
+
+        <div class="card">
+            <h2>Rate Your Interest (1 - 5)</h2>
+            <input type="range" id="ratingRange" min="1" max="5" value="3">
+            <p>Your Rating: <span id="ratingValue">3</span></p>
+        </div>
+
+        <button class="recommend-btn" onclick="getRecommendations()">Get Recommendations</button>
+
+        <div class="results card">
+            <h2>Recommended Movies</h2>
+            <ul id="resultList"></ul>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
